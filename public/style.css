@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+.roboto-bold{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(31, 32, 50);
+    justify-content: space-between;
+    align-items: center;
+}
+header h2{
+    color: white;
+    margin-left: 4rem;
+}
+header button{
+    background-color: rgb(211, 211, 9);
+    border: none;
+    border-radius:8% ;
+    margin-right: 4rem;
+    height: 1.7rem;
+    width: 3.8rem;
+}
+header input[type="text"]{
+    height: 1.4rem;
+    width: 12rem;
+    padding-left: 0.3rem;
+}
+header input[type="text"]:focus{
+    outline: none;
+}
+main{
+    height: 80vh;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main h1{
+   color: rgb(31, 32, 50);
+}
+.container{
+    width: 70%;
+    height: 85%;
+    background-color: white;
+    border-radius: 0.7rem;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.img img{
+    width: 20rem;
+    height: 24.9rem;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+.container .movieInfo{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+.container .movieInfo h1,#rating,#genre{
+    text-align: center;
+    margin-top: 1rem;
+}
+#genre{
+    margin-bottom: 0.5rem;
+}
+.info{
+    margin-top: 0.7rem;
+}
+span{
+    color: gray;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(31, 32, 50);
+    align-items: center;
+    justify-content: center;
+}
+footer h3{
+    color: white;
+}
+
