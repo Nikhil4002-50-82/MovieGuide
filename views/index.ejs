@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Guide App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<body>
+    <header class="design">
+        <h2 class="roboto-bold">Movie Guide App</h2>
+        <div>
+            <form action="/movie" method="post">
+                <input type="text" placeholder="movie name" name="movieName" />
+                <button class="btn">Search</button>
+            </form>
+        </div>
+        </ul>
+    </header>
+    <main>
+        <% if(locals.result){ %>
+        <div class="container">
+            <div class="img">
+                <img src="<%= result.Poster %>" alt="">
+            </div>
+            <div class="movieInfo">
+                <h1><%= result.Title %></h1>
+                <h4 id="rating">Rating: &#11088;<span><%= result.imdbRating %></span></h4>
+                <h4 id="genre"><%= result.Genre %></h4>
+                <h4 class="info">Released Date: <span><%= result.Released%></span></h4>
+                <h4 class="info">Duration: <span><%= result.Runtime %></span></h4>
+                <h4 class="info">Box Office: <span><%= result.BoxOffice %></span></h4>
+                <h4 class="info">Director: <span><%= result.Director %></span></h4>
+                <h4 class="info">Cast: <span><%= result.Actors %></span></h4>
+                <h4 class="info">Plot: <span><%= result.Plot %></span></h4>
+            </div>
+        </div>
+        <% }else{ %>
+            <div><h1>Search Movie Name</h1></div>
+            <% } %>
+    </main>
+    <footer class="design">
+    <h3>
+        <%  if(locals.year){%>
+        &copy;
+        <%= year%>
+        Movie Guide App
+        <% } %>
+    </h3>
+    </footer>
+</body>
+</html>
